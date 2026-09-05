@@ -44,11 +44,11 @@ p{margin:0 0 1em}
   display:flex;align-items:center;justify-content:flex-end;gap:10px;
 }
 .home-link{
-  flex:0 0 auto;width:36px;height:36px;border:1px solid var(--line);border-radius:50%;
+  flex:0 0 auto;width:36px;height:36px;border-radius:50%;
   display:inline-flex;align-items:center;justify-content:center;background:#fff;color:var(--ink);
   box-shadow:0 4px 14px rgba(16,33,63,.06);
 }
-.home-link:hover{border-color:#b8c9df;background:#f8fbff;color:var(--blue)}
+.home-link:hover{background:#f8fbff;color:var(--blue)}
 .home-link svg{
   width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:2;
   stroke-linecap:round;stroke-linejoin:round;
