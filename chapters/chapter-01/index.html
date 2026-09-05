@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>撐得住，才賺得到｜史丹利</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="progress"></div>
+<main class="page" id="top">
+  <div class="topline">
+    <div>FREE E-BOOK</div>
+    <div>作者｜史丹利</div>
+  </div>
+
+  <div class="cover">
+    <img src="assets/cover.png" alt="《撐得住，才賺得到》封面">
+  </div>
+
+  <span class="eyebrow">長期投資實戰筆記</span>
+  <h1>撐得住，才賺得到</h1>
+  <p class="lead">從600萬到1,180萬淨價值：一年核心資產 × 股票質押實戰</p>
+
+  <div class="quote">你能承受多少風險，才有資格擁有多少報酬。</div>
+
+  <div class="cta">
+    <a class="btn" href="00_preface.html">開始閱讀</a>
+    <a class="btn secondary" href="#toc">查看目錄</a>
+  </div>
+
+  <div class="card gray">
+    <div class="kicker">案例說明</div>
+    <p class="note" style="margin-bottom:0">
+      2025–2026 實戰紀錄；期間適逢市場明顯上漲，績效僅供策略與風險管理參考，不代表未來報酬。
+    </p>
+  </div>
+
+  <div class="rule"></div>
+
+  <section id="toc">
+    <span class="eyebrow">CONTENTS</span>
+    <h2 style="margin-top:.2em">目錄</h2>
+    <div class="toc">
+      <a href="00_preface.html"><span class="n">序</span><div><strong>撐得住，不只是下跌</strong><span class="desc">真正更難的，往往是上漲時還能留在市場。</span></div></a>
+      <a href="01_philosophy.html"><span class="n">01</span><div><strong>先講結論：我的投資邏輯</strong><span class="desc">風險、趨勢、紀律，以及「不是借最多，而是撐最久」。</span></div></a>
+      <a href="02_structure.html"><span class="n">02</span><div><strong>600萬本金怎麼搭出雙層資產</strong><span class="desc">核心資產、質押200萬、第二層部位與49萬提領。</span></div></a>
+      <a href="03_margin.html"><span class="n">03</span><div><strong>質押不是重點，維持率才是</strong><span class="desc">166.7% → 334.17%，以及未質押股票這層安全墊。</span></div></a>
+      <a href="04_performance.html"><span class="n">04</span><div><strong>創高、回撤、再創高</strong><span class="desc">用一年真實曲線看「扛得住」到底是什麼。</span></div></a>
+      <a href="05_psychology.html"><span class="n">05</span><div><strong>賺錢之後，反而更難撐</strong><span class="desc">漲時想落袋、跌時不敢進場，是最常見的人性陷阱。</span></div></a>
+      <a href="06_risk.html"><span class="n">06</span><div><strong>這套策略的缺點與邊界</strong><span class="desc">槓桿真正危險的時刻，是資產還沒長大之前。</span></div></a>
+      <a href="07_epilogue.html"><span class="n">終</span><div><strong>讓時間把價值兌現</strong><span class="desc">看對長期方向後，真正重要的是能不能一直做同一個人。</span></div></a>
+    </div>
+  </section>
+
+  <div class="footer">© 2026 史丹利｜免費電子書</div>
+</main>
+<a class="float-toc" href="#toc" aria-label="目錄">☰</a>
+
+<script>
+(function(){
+  const bar=document.querySelector('.progress');
+  function update(){
+    const h=document.documentElement;
+    const max=h.scrollHeight-h.clientHeight;
+    const pct=max>0 ? (h.scrollTop/max)*100 : 0;
+    bar.style.width=pct+'%';
+  }
+  document.addEventListener('scroll',update,{passive:true});
+  update();
+})();
+</script>
+
+</body>
+</html>

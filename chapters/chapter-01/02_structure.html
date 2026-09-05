@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>02｜600萬本金怎麼搭出雙層資產</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="progress"></div>
+<main class="page" id="top">
+  <div class="topline">
+    <div><span class="chapter-no">02</span> · STRUCTURE</div>
+    <div>撐得住，才賺得到</div>
+  </div>
+
+  <span class="eyebrow">第二章</span>
+  <h1>600萬本金怎麼搭出雙層資產</h1>
+  <p class="lead">先把核心資產做厚，再用200萬質押建立第二層部位；這一章直接拆解整個實戰結構。</p>
+
+  
+
+<div class="quote">不是先借錢，再想要買什麼；而是先建立核心資產，再有限度地放大可投資本金。</div>
+
+<div class="figure">
+  <img src="assets/slide_conditions.png" alt="投資條件與資產配置總覽圖">
+  <div class="figcap">圖解版總覽：整理核心資產、質押現況與第二層投資部位，方便手機閱讀時先快速掌握全貌。</div>
+</div>
+
+<h2>第一層｜核心資產</h2>
+<p>第一層由自有資金建立，核心標的是 0050、0056、00878、00713。這一層的任務不是追求短期爆發，而是建立足夠厚的資產基礎。</p>
+
+<div class="card blue">
+  <div class="kicker">截至 2026/09/04</div>
+  <div class="big-number">核心部位市值 11,186,350 元</div>
+  <p>核心部位含息損益 +5,563,018 元，績效 +91.8%，月配息 27,480 元。</p>
+  <p class="note" style="margin-bottom:0">股息沒有再投入，作為現金流使用。</p>
+</div>
+
+<h2>第二層｜股票質押 200 萬</h2>
+<p>在核心資產建立後，我以股票質押取得 200 萬，再建立第二層部位。最新持有標的是 0050、00646、00713、00981A；00937B 已經賣出。</p>
+
+<div class="card">
+  <div class="kicker">第二層最新狀態</div>
+  <div class="big-number">目前市值 2,118,930 元</div>
+  <p>目前投資損益 +622,323 元。</p>
+</div>
+
+<div class="gallery two">
+  <div class="figure">
+    <img src="assets/raw_overview.jpg" alt="完整投資總表原始截圖">
+    <div class="figcap">原始資料截圖：完整投資總表，包含核心部位、質押再投入與已借商品概況。</div>
+  </div>
+  <div class="figure">
+    <img src="assets/raw_second_layer.jpg" alt="質押出的 200 萬目前持股截圖">
+    <div class="figcap">原始資料截圖：質押出的 200 萬目前持股，已更新為 0050、00646、00713、00981A。</div>
+  </div>
+</div>
+
+<h2>5/8 的一個重要動作：提領 49 萬</h2>
+<p>2026/5/8，我曾賣出部分第二層部位，提領 49 萬作其他用途。這代表第二層資產不只存在於帳面，也具備資金調度功能。</p>
+
+<div class="card gray">
+  <div class="kicker">本章重點</div>
+  <p style="font-size:21px;font-weight:800;margin:.35em 0">核心資產先做厚，槓桿才有存在的意義。</p>
+  <p style="margin-bottom:0">借錢不是目的；目的，是讓原本已經存在的資產，在風險可承受的前提下，多一層成長機會。</p>
+</div>
+
+
+
+  <div class="nav">
+    <a href="01_philosophy.html">← 第一章</a>
+    <a href="index.html#toc">目錄</a>
+    <a href="03_margin.html">下一章 →</a>
+  </div>
+  <div class="footer">© 2026 史丹利｜2025–2026 實戰紀錄僅供策略與風險管理參考，不代表未來報酬。</div>
+</main>
+<a class="float-toc" href="index.html#toc" aria-label="目錄">☰</a>
+
+<script>
+(function(){
+  const bar=document.querySelector('.progress');
+  function update(){
+    const h=document.documentElement;
+    const max=h.scrollHeight-h.clientHeight;
+    const pct=max>0 ? (h.scrollTop/max)*100 : 0;
+    bar.style.width=pct+'%';
+  }
+  document.addEventListener('scroll',update,{passive:true});
+  update();
+})();
+</script>
+
+</body>
+</html>

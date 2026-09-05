@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>序｜撐得住，不只是下跌</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="progress"></div>
+<main class="page" id="top">
+  <div class="topline">
+    <div><span class="chapter-no">序</span> · PREFACE</div>
+    <div>撐得住，才賺得到</div>
+  </div>
+
+  <span class="eyebrow">序章</span>
+  <h1>撐得住，不只是下跌</h1>
+  <p class="lead">多數人以為「撐得住」是在股票下跌時不要賣。這只說對一半。真正最容易讓長期投資人下車的，往往是上漲。</p>
+
+  <div class="quote">跌的時候，人怕賠錢；漲的時候，人怕賺到的又失去。</div>
+
+  <p>市場下跌時，只要還沒賣，很多人會告訴自己：「都跌這麼多了，再等等。」虧損反而讓人不甘心離場。</p>
+
+  <p>可是市場一旦上漲，心理會完全改變。漲了20%，開始想是不是該先賣；漲了30%，開始擔心回檔；漲了50%，腦中往往已經不是長期趨勢，而是：「先賣掉，等跌回來再買。」</p>
+
+  <div class="card blue">
+    <div class="kicker">最常見的結果</div>
+    <h3>漲的時候太早下車，跌的時候又不敢上車。</h3>
+    <p style="margin-bottom:0">你以為自己在控制風險，最後卻可能只是把自己從真正重要的長期趨勢裡移出去。</p>
+  </div>
+
+  <h2>我所說的「撐得住」</h2>
+  <p>不是硬拗、不是死抱，也不是不管基本面。它的前提是：你知道自己為什麼買、你能承受多少波動、以及什麼情況代表原本的投資邏輯真的失效。</p>
+
+  <p>只要長期趨勢與原本邏輯沒有改變，價格本身就不應該成為你離場的唯一理由。</p>
+
+  <div class="quote">下跌考驗你的承受力，上漲才真正考驗你的信仰。</div>
+
+  <h2>這本書不教你猜高低點</h2>
+  <p>這本免費電子書要談的是更實際的事：如何建立核心資產、如何在可承受的範圍內使用質押、如何看維持率與安全邊際，以及如何面對一次又一次的創高、回撤、再創高。</p>
+
+  <p>我的目的不是證明這套方法一定有效，而是把真實紀錄攤開來，讓你看到：一套策略要能走到最後，最重要的不是某一次判斷有多漂亮，而是你有沒有能力一直留在市場。</p>
+
+  <div class="nav">
+    <a href="index.html">← 首頁</a>
+    <a href="index.html#toc">目錄</a>
+    <a href="01_philosophy.html">下一章 →</a>
+  </div>
+  <div class="footer">© 2026 史丹利</div>
+</main>
+<a class="float-toc" href="index.html#toc" aria-label="目錄">☰</a>
+
+<script>
+(function(){
+  const bar=document.querySelector('.progress');
+  function update(){
+    const h=document.documentElement;
+    const max=h.scrollHeight-h.clientHeight;
+    const pct=max>0 ? (h.scrollTop/max)*100 : 0;
+    bar.style.width=pct+'%';
+  }
+  document.addEventListener('scroll',update,{passive:true});
+  update();
+})();
+</script>
+
+</body>
+</html>

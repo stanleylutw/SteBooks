@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>03｜質押不是重點，維持率才是</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="progress"></div>
+<main class="page" id="top">
+  <div class="topline">
+    <div><span class="chapter-no">03</span> · MARGIN</div>
+    <div>撐得住，才賺得到</div>
+  </div>
+
+  <span class="eyebrow">第三章</span>
+  <h1>質押不是重點，維持率才是</h1>
+  <p class="lead">真正重要的不是券商願意借你多少，而是市場下跌之後，你還剩多少選擇。</p>
+
+  
+
+<div class="quote">質押真正重要的，不是借到多少，而是市場跌下來時，你還剩多少選擇。</div>
+
+<div class="figure">
+  <img src="assets/slide_margin.png" alt="撐得住的槓桿結構圖">
+  <div class="figcap">圖解版重點：先把「初期 60% 借滿」與「現在 334.17% 維持率」分開，避免把不同階段混為一談。</div>
+</div>
+
+<h2>初期｜60% 借滿，維持率約 166.7%</h2>
+<p>初期質押借款 200 萬。如果以 60% 的借款成數估算，當時對應的質押股票市值約 333.33 萬，初始維持率約 166.7%。</p>
+
+<div class="card blue">
+  <div class="kicker">初始結構</div>
+  <div class="big-number">200 萬 ÷ 60% ≈ 333.33 萬</div>
+  <p style="margin-bottom:0">333.33 萬 ÷ 200 萬 ≈ 166.7%</p>
+</div>
+
+<h2>現在｜維持率已拉高到 334.17%</h2>
+<p>隨著擔保品價格成長，目前已借商品市值為 6,873,400 元，整戶維持率為 334.17%，合計應償還金額為 2,056,800 元。</p>
+
+<div class="statgrid four">
+  <div class="mini"><div class="label">已借總金額</div><div class="value">200 萬</div></div>
+  <div class="mini"><div class="label">已借商品市值</div><div class="value">687.34 萬</div></div>
+  <div class="mini"><div class="label">整戶維持率</div><div class="value">334.17%</div></div>
+  <div class="mini"><div class="label">合計應償還</div><div class="value">205.68 萬</div></div>
+</div>
+
+<div class="figure">
+  <img src="assets/raw_margin.jpg" alt="質押現況原始截圖">
+  <div class="figcap">原始資料截圖：券商介面顯示的已借總金額、已借商品市值、整戶維持率、目前利息與合計應償還。</div>
+</div>
+
+<h2>真正的第二道安全墊：未質押股票</h2>
+<p>目前還有未質押股票可作為額外緩衝。這代表若市場大幅修正，仍有機會追加擔保，提高整體維持率。</p>
+
+<div class="card gray">
+  <div class="kicker">但要注意</div>
+  <p style="margin-bottom:0">未質押股票不是無限安全。若市場全面重挫，追加擔保的資產本身也會一起下跌，所以它只能是第二道防線，不應被當成永遠不會用完的保證。</p>
+</div>
+
+<div class="quote">安全邊際不是一開始就有 334%，而是靠資產成長逐步把槓桿風險拉開。</div>
+
+
+
+  <div class="nav">
+    <a href="02_structure.html">← 第二章</a>
+    <a href="index.html#toc">目錄</a>
+    <a href="04_performance.html">下一章 →</a>
+  </div>
+  <div class="footer">© 2026 史丹利｜2025–2026 實戰紀錄僅供策略與風險管理參考，不代表未來報酬。</div>
+</main>
+<a class="float-toc" href="index.html#toc" aria-label="目錄">☰</a>
+
+<script>
+(function(){
+  const bar=document.querySelector('.progress');
+  function update(){
+    const h=document.documentElement;
+    const max=h.scrollHeight-h.clientHeight;
+    const pct=max>0 ? (h.scrollTop/max)*100 : 0;
+    bar.style.width=pct+'%';
+  }
+  document.addEventListener('scroll',update,{passive:true});
+  update();
+})();
+</script>
+
+</body>
+</html>

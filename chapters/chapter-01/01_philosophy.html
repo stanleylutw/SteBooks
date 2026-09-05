@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>01｜先講結論：我的投資邏輯</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="progress"></div>
+<main class="page" id="top">
+  <div class="topline">
+    <div><span class="chapter-no">01</span> · PHILOSOPHY</div>
+    <div>撐得住，才賺得到</div>
+  </div>
+
+  <span class="eyebrow">第一章</span>
+  <h1>先講結論：我的投資邏輯</h1>
+  <p class="lead">這一章不繞路。我的投資方法可以濃縮成四件事：看長期趨勢、先建立核心資產、只使用能承受的槓桿、然後留在市場。</p>
+
+  <div class="quote">你能承受多少風險，才有資格擁有多少報酬。</div>
+
+  <h2>1｜看對長期趨勢，比猜短期高低點重要</h2>
+  <p>我不把投資建立在「每一次都買在最低、賣在最高」這種假設上。真正的大波段，通常來自長期企業獲利、產業成長與資產價格累積，而不是每天猜市場下一根K線。</p>
+  <p>當長期趨勢沒有改變，短期價格波動比較像是你必須支付的成本，而不是策略失敗的證明。</p>
+
+  <h2>2｜先有核心資產，再談槓桿</h2>
+  <p>我的順序不是先借錢，再想要買什麼。是先用自有資金建立核心部位，讓資產本身有足夠厚度，再從既有資產中釋放一小部分融資能力。</p>
+
+  <div class="card blue">
+    <div class="kicker">我的順序</div>
+    <div class="big-number">核心資產 → 融資能力 → 第二層資產</div>
+    <p style="margin-bottom:0">不是「借錢創造資產」，而是「已有資產之後，再有限度地放大可投資本金」。</p>
+  </div>
+
+  <h2>3｜不是借最多，而是撐最久</h2>
+  <p>槓桿真正的風險，不在於利率本身，而在於市場大跌時你會不會失去選擇。如果跌20%、30%、40%之後，你還能繼續持有，那才叫做可承受的槓桿。</p>
+  <p>所以我更關心的是維持率、安全邊際、未質押資產與現金流，而不是券商願意借我多少。</p>
+
+  <h2>4｜真正重要的是「不要被迫下車」</h2>
+  <p>市場可以跌，帳面獲利可以縮水，甚至一段時間看起來像做錯。但只要核心邏輯沒有改變，而資金結構又允許你繼續待在市場，時間就還站在你這邊。</p>
+
+  <div class="card gray">
+    <div class="kicker">本章重點</div>
+    <p style="font-size:21px;font-weight:800;margin:.35em 0">投資真正重要的，不只是你做對了什麼。</p>
+    <p style="margin-bottom:0">而是當你看對長期趨勢、建立適合自己的策略之後，能不能承受過程中的波動、堅守紀律，並留在市場，直到時間把價值兌現。</p>
+  </div>
+
+  <div class="nav">
+    <a href="00_preface.html">← 序章</a>
+    <a href="index.html#toc">目錄</a>
+    <a href="02_structure.html">下一章 →</a>
+  </div>
+  <div class="footer">© 2026 史丹利</div>
+</main>
+<a class="float-toc" href="index.html#toc" aria-label="目錄">☰</a>
+
+<script>
+(function(){
+  const bar=document.querySelector('.progress');
+  function update(){
+    const h=document.documentElement;
+    const max=h.scrollHeight-h.clientHeight;
+    const pct=max>0 ? (h.scrollTop/max)*100 : 0;
+    bar.style.width=pct+'%';
+  }
+  document.addEventListener('scroll',update,{passive:true});
+  update();
+})();
+</script>
+
+</body>
+</html>

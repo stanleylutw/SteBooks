@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>04｜創高、回撤、再創高</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="progress"></div>
+<main class="page" id="top">
+  <div class="topline">
+    <div><span class="chapter-no">04</span> · PERFORMANCE</div>
+    <div>撐得住，才賺得到</div>
+  </div>
+
+  <span class="eyebrow">第四章</span>
+  <h1>創高、回撤、再創高</h1>
+  <p class="lead">最終績效只是一個結果；真正能證明策略撐得住的，是中間一次又一次的回撤紀錄。</p>
+
+  
+
+<div class="quote">真正重要的不是沒有回撤，而是每次回撤都沒有讓策略被迫停止。</div>
+
+<div class="figure">
+  <img src="assets/slide_performance.png" alt="一年實戰績效與回撤紀錄圖">
+  <div class="figcap">圖解版實戰頁：把關鍵數字、損益曲線、高點回撤紀錄與重要事件放在同一頁，便於快速理解整段實戰。</div>
+</div>
+
+<div class="card blue">
+  <div class="kicker">截至 2026/09/04</div>
+  <div class="big-number">總損益 +6,225,816 元</div>
+  <p>總績效 +85.63%，總市值 13,314,900 元，累積配息 479,166 元。</p>
+</div>
+
+<h2>高點不是終點，回撤也不是失敗</h2>
+<p>一年裡，資產不是一路直線往上，而是反覆經歷「創高 → 回撤 → 再創高」。這些回撤，才真正檢驗一套策略能不能撐住。</p>
+
+<div class="card">
+  <div class="kicker">高點回撤紀錄</div>
+  <p><strong>2025/10/31：</strong>1,338,886 → 798,496，回撤 -540,390</p>
+  <p><strong>2026/01/28：</strong>2,313,438 → 2,010,998，回撤 -302,440</p>
+  <p><strong>2026/02/25：</strong>2,918,448 → 2,155,778，回撤 -762,670</p>
+  <p><strong>2026/05/07：</strong>4,539,238 → 4,095,378，回撤 -443,860</p>
+  <p><strong>2026/06/22：</strong>6,211,076 → 4,668,676，回撤 -1,542,400</p>
+  <p style="margin-bottom:0"><strong>2026/09/04：</strong>6,225,816，再創新高</p>
+</div>
+
+<div class="gallery two">
+  <div class="figure">
+    <img src="assets/raw_curve.jpg" alt="總損益曲線原始截圖">
+    <div class="figcap">原始資料截圖：從 2025/09 到 2026/09 的總損益曲線，能直觀看到中間多次回檔。</div>
+  </div>
+  <div class="figure">
+    <img src="assets/raw_table.jpg" alt="原始績效總表截圖">
+    <div class="figcap">原始資料截圖：另一版績效整理畫面，可對照總損益、總績效、總市值與月配息。</div>
+  </div>
+</div>
+
+<h2>最大的一次回撤：154.24 萬</h2>
+<p>2026/6/22 總損益一度來到 621.11 萬，之後到 7/29 回落至 466.87 萬，這一段回撤約 154.24 萬。</p>
+
+<p>如果只看那個時間點，很容易產生「先賣掉保住獲利」的衝動。但如果原本的投資邏輯沒有改變，而且資金結構仍然撐得住，真正重要的是不要讓短期回撤改變長期策略。</p>
+
+<div class="card gray">
+  <div class="kicker">5/8 事件</div>
+  <p style="margin-bottom:0">2026/5/8 曾提領 49 萬作其他用途。也就是說，後續曲線並不是一個完全封閉、沒有資金流出的帳戶，這點在解讀績效時必須一起看。</p>
+</div>
+
+
+
+  <div class="nav">
+    <a href="03_margin.html">← 第三章</a>
+    <a href="index.html#toc">目錄</a>
+    <a href="05_psychology.html">下一章 →</a>
+  </div>
+  <div class="footer">© 2026 史丹利｜2025–2026 實戰紀錄僅供策略與風險管理參考，不代表未來報酬。</div>
+</main>
+<a class="float-toc" href="index.html#toc" aria-label="目錄">☰</a>
+
+<script>
+(function(){
+  const bar=document.querySelector('.progress');
+  function update(){
+    const h=document.documentElement;
+    const max=h.scrollHeight-h.clientHeight;
+    const pct=max>0 ? (h.scrollTop/max)*100 : 0;
+    bar.style.width=pct+'%';
+  }
+  document.addEventListener('scroll',update,{passive:true});
+  update();
+})();
+</script>
+
+</body>
+</html>

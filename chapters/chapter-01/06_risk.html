@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>06｜這套策略的缺點與邊界</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="progress"></div>
+<main class="page" id="top">
+  <div class="topline">
+    <div><span class="chapter-no">06</span> · RISK</div>
+    <div>撐得住，才賺得到</div>
+  </div>
+
+  <span class="eyebrow">第六章</span>
+  <h1>這套策略的缺點與邊界</h1>
+  <p class="lead">任何槓桿策略都有邊界。真正成熟的做法，不是只談成功，而是先知道什麼情況會讓它失敗。</p>
+
+  
+<div class="quote">這套方法不是為了證明槓桿一定有效，而是證明：只有先把風險控制在能承受的範圍內，槓桿才有資格存在。</div>
+
+<h2>1｜最危險的時間，是剛加槓桿之後</h2>
+<p>現在的 334.17% 維持率，是資產上漲後的結果。初期若以 60% 借滿，維持率大約只有 166.7%。如果剛加槓桿就先遇到 -30% 或 -40% 的大跌，風險會比現在高得多。</p>
+
+<h2>2｜核心與第二層，仍有高度相關</h2>
+<p>核心部位與第二層部位都以台股 ETF 為主，雖然標的不同，但極端市場環境下很可能一起下跌。多檔 ETF 不等於風險完全分散。</p>
+
+<h2>3｜未質押股票只是安全墊，不是無限防線</h2>
+<p>如果市場一路下跌，把未質押股票補進去，確實可以提高維持率；但那些股票本身也會隨市場下跌，所以這道安全墊有極限。</p>
+
+<h2>4｜利率可能上升</h2>
+<p>質押利率不是永遠固定。當資金成本提高，第二層資產要創造的報酬門檻也會跟著提高。</p>
+
+<h2>5｜提領資金後，槓桿效率會下降</h2>
+<p>5/8 提領 49 萬後，部分借款已經不再對應投資資產。如果未來持續提領，必須更清楚地區分「投資槓桿」與「消費／其他用途負債」。</p>
+
+<h2>6｜最大的心理風險：成功之後加大槓桿</h2>
+<p>當績效很好、維持率很高，最容易產生「既然 200 萬有效，那 300、400、500 萬是不是更快？」的想法。真正危險的，常常不是一開始，而是成功之後。</p>
+
+<div class="card gray">
+  <div class="kicker">案例限制</div>
+  <p style="margin-bottom:0">2025–2026 期間適逢市場明顯上漲，本書紀錄只能證明這段歷史裡策略如何運作，不能把 +85.63% 直接當成未來正常報酬率。</p>
+</div>
+
+
+  <div class="nav">
+    <a href="05_psychology.html">← 第五章</a>
+    <a href="index.html#toc">目錄</a>
+    <a href="07_epilogue.html">結語 →</a>
+  </div>
+  <div class="footer">© 2026 史丹利｜2025–2026 實戰紀錄僅供策略與風險管理參考，不代表未來報酬。</div>
+</main>
+<a class="float-toc" href="index.html#toc" aria-label="目錄">☰</a>
+
+<script>
+(function(){
+  const bar=document.querySelector('.progress');
+  function update(){
+    const h=document.documentElement;
+    const max=h.scrollHeight-h.clientHeight;
+    const pct=max>0 ? (h.scrollTop/max)*100 : 0;
+    bar.style.width=pct+'%';
+  }
+  document.addEventListener('scroll',update,{passive:true});
+  update();
+})();
+</script>
+
+</body>
+</html>

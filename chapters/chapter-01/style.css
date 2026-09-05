@@ -1,0 +1,125 @@
+
+:root{
+  --bg:#f7f9fc;
+  --paper:#ffffff;
+  --ink:#10213f;
+  --muted:#67758c;
+  --line:#dfe6ef;
+  --blue:#0b5fc6;
+  --blue2:#eaf3ff;
+  --warn:#f5f6f8;
+  --danger:#b42318;
+  --max:760px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang TC","Noto Sans TC","Microsoft JhengHei",sans-serif;
+  background:var(--bg);
+  color:var(--ink);
+  line-height:1.82;
+  font-size:18px;
+}
+a{color:var(--blue);text-decoration:none}
+img{max-width:100%;height:auto;display:block}
+.progress{
+  position:fixed;top:0;left:0;height:3px;width:0;
+  background:var(--blue);z-index:99;
+}
+.page{
+  max-width:var(--max);
+  margin:0 auto;
+  min-height:100vh;
+  background:var(--paper);
+  padding:34px 24px 72px;
+  box-shadow:0 0 0 1px rgba(16,33,63,.03);
+}
+.topline{
+  display:flex;justify-content:space-between;align-items:center;
+  gap:14px;margin:4px 0 28px;font-size:13px;letter-spacing:.12em;color:var(--muted);
+}
+.chapter-no{font-weight:700;color:var(--ink)}
+.eyebrow{
+  display:inline-block;color:var(--blue);font-size:14px;font-weight:700;
+  letter-spacing:.08em;margin-bottom:8px;
+}
+h1{
+  font-size:clamp(32px,8vw,56px);
+  line-height:1.12;margin:.1em 0 .35em;letter-spacing:-.03em;
+}
+h2{
+  font-size:clamp(25px,6vw,34px);
+  line-height:1.25;margin:1.8em 0 .55em;letter-spacing:-.02em;
+}
+h3{font-size:21px;line-height:1.4;margin:1.5em 0 .45em}
+.lead{
+  font-size:21px;line-height:1.72;color:#3f4f66;margin:0 0 28px;
+}
+.rule{height:1px;background:var(--line);margin:28px 0}
+.cover{
+  border:1px solid var(--line);border-radius:18px;overflow:hidden;background:#fff;
+  box-shadow:0 12px 36px rgba(16,33,63,.07);margin:14px 0 28px;
+}
+.cta{
+  display:flex;gap:12px;flex-wrap:wrap;margin:24px 0 34px;
+}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-height:48px;padding:0 18px;border-radius:12px;
+  background:var(--blue);color:white;font-weight:700;
+}
+.btn.secondary{background:#eef3f8;color:var(--ink)}
+.quote{
+  border-left:4px solid var(--blue);background:#f8fbff;
+  padding:18px 18px;margin:24px 0;border-radius:0 12px 12px 0;
+  font-size:21px;font-weight:700;line-height:1.65;
+}
+.card{
+  border:1px solid var(--line);border-radius:16px;padding:18px;margin:16px 0;background:#fff;
+}
+.card.blue{background:var(--blue2);border-color:#cfe2fb}
+.card.gray{background:var(--warn)}
+.kicker{font-size:14px;font-weight:700;color:var(--blue);letter-spacing:.08em}
+.big-number{font-size:34px;font-weight:800;line-height:1.15;color:var(--blue)}
+.toc{display:grid;gap:10px;margin:20px 0}
+.toc a{
+  display:flex;gap:14px;align-items:flex-start;padding:15px 16px;border:1px solid var(--line);
+  border-radius:14px;color:var(--ink);background:#fff;
+}
+.toc .n{
+  flex:0 0 34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;
+  background:#edf4fc;color:var(--blue);font-size:14px;font-weight:800;
+}
+.toc strong{display:block}
+.toc span.desc{display:block;color:var(--muted);font-size:15px;line-height:1.5;margin-top:2px}
+ul{padding-left:1.15em}
+li{margin:.45em 0}
+.note{
+  font-size:14px;line-height:1.65;color:var(--muted);
+}
+.nav{
+  margin-top:44px;padding-top:20px;border-top:1px solid var(--line);
+  display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;
+}
+.nav a{
+  display:flex;justify-content:center;align-items:center;text-align:center;
+  padding:12px 8px;border-radius:10px;background:#f2f5f8;color:var(--ink);
+  font-size:14px;font-weight:700;
+}
+.float-toc{
+  position:fixed;right:18px;bottom:18px;width:48px;height:48px;border-radius:50%;
+  background:var(--ink);color:#fff;display:flex;align-items:center;justify-content:center;
+  font-size:21px;box-shadow:0 8px 24px rgba(16,33,63,.22);z-index:20;
+}
+.footer{
+  margin-top:42px;color:var(--muted);font-size:13px;text-align:center;
+}
+@media (max-width:560px){
+  body{font-size:17px;background:#fff}
+  .page{padding:28px 18px 68px;box-shadow:none}
+  .lead{font-size:19px}
+  .quote{font-size:19px}
+  .nav{grid-template-columns:1fr 1fr 1fr}
+  .topline{margin-bottom:22px}
+}
