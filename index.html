@@ -95,18 +95,6 @@ h1{
   animation:orbit 16s linear infinite;
   pointer-events:none;
 }
-.book-carousel:after{
-  content:"";
-  position:absolute;
-  width:86px;
-  height:86px;
-  right:-34px;
-  top:34px;
-  border:2px solid rgba(183,139,61,.26);
-  border-radius:50%;
-  animation:orbit 11s linear infinite reverse;
-  pointer-events:none;
-}
 @keyframes orbit{
   to{transform:rotate(348deg)}
 }
@@ -264,7 +252,6 @@ h2{
   .site{padding:24px 18px 52px}
   .intro{grid-template-columns:1fr;padding-top:26px}
   .book-carousel{max-width:320px}
-  .book-carousel:after{right:8px}
   .carousel-control{width:34px;height:34px;font-size:21px}
   .carousel-control.prev{left:-4px}
   .carousel-control.next{right:-4px}
