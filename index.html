@@ -82,7 +82,7 @@ h1{
   background:var(--paper);
   border:1px solid var(--line);
   border-radius:8px;
-  overflow:hidden;
+  overflow:visible;
   box-shadow:0 18px 44px rgba(17,24,39,.12);
 }
 .book-carousel:before{
@@ -114,6 +114,11 @@ h1{
   position:relative;
   display:flex;
   transition:transform .36s ease;
+}
+.carousel-window{
+  position:relative;
+  overflow:hidden;
+  border-radius:8px;
 }
 .book-slide{
   flex:0 0 100%;
@@ -164,8 +169,8 @@ h1{
   place-items:center;
   box-shadow:0 8px 20px rgba(17,24,39,.1);
 }
-.carousel-control.prev{left:12px}
-.carousel-control.next{right:12px}
+.carousel-control.prev{left:-19px}
+.carousel-control.next{right:-19px}
 .carousel-dots{
   position:absolute;
   left:0;
@@ -259,7 +264,10 @@ h2{
   .site{padding:24px 18px 52px}
   .intro{grid-template-columns:1fr;padding-top:26px}
   .book-carousel{max-width:320px}
+  .book-carousel:after{right:8px}
   .carousel-control{width:34px;height:34px;font-size:21px}
+  .carousel-control.prev{left:-4px}
+  .carousel-control.next{right:-4px}
   .slide-info{padding:16px 14px 24px}
   .slide-info strong{font-size:18px}
   .section-title{display:block}
@@ -283,21 +291,23 @@ h2{
       <p class="lead">收錄投資實戰筆記、風險管理與長期策略，並用不同角度探索財務觀念。</p>
     </div>
     <div class="book-carousel" aria-label="電子書封面選書">
-      <div class="carousel-track">
-        <a class="book-slide" href="chapters/chapter-01/">
-          <img src="chapters/chapter-01/assets/cover.png" alt="《撐得住，才賺得到》封面">
-          <div class="slide-info">
-            <span>BOOK 01</span>
-            <strong>撐得住，才賺得到</strong>
-          </div>
-        </a>
-        <a class="book-slide" href="chapters/chapter-02/">
-          <img src="chapters/chapter-02/assets/cover_reference.png" alt="《房子不要只住，要讓它工作》封面">
-          <div class="slide-info">
-            <span>BOOK 02</span>
-            <strong>房子不要只住，要讓它工作</strong>
-          </div>
-        </a>
+      <div class="carousel-window">
+        <div class="carousel-track">
+          <a class="book-slide" href="chapters/chapter-01/">
+            <img src="chapters/chapter-01/assets/cover.png" alt="《撐得住，才賺得到》封面">
+            <div class="slide-info">
+              <span>BOOK 01</span>
+              <strong>撐得住，才賺得到</strong>
+            </div>
+          </a>
+          <a class="book-slide" href="chapters/chapter-02/">
+            <img src="chapters/chapter-02/assets/cover_reference.png" alt="《房子不要只住，要讓它工作》封面">
+            <div class="slide-info">
+              <span>BOOK 02</span>
+              <strong>房子不要只住，要讓它工作</strong>
+            </div>
+          </a>
+        </div>
       </div>
       <button class="carousel-control prev" type="button" aria-label="上一本文">‹</button>
       <button class="carousel-control next" type="button" aria-label="下一本文">›</button>
