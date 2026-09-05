@@ -1,0 +1,274 @@
+<!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>第 5 章｜如果十年前就讓房子多做一份工作</title><link rel="stylesheet" href="style.css"></head><body><main class="chapter-page">
+<div class="chapter-top"><a href="index.html" class="brand"><span class="brand-mark">⌂</span><span>房屋淨值投資實戰筆記</span></a><a href="contents.html">目錄</a></div><div class="chapter-progress"><span style="width:64%"></span></div>
+
+<section class="chapter-hero">
+  <div class="chapter-kicker">05 / RECALCULATED BACKTEST</div>
+  <h1 class="chapter-title">第 5 章｜如果十年前就讓房子多做一份工作</h1>
+  <p class="chapter-lead">這次把模型真正算到底：房價兩種模式都固定 +3%／年；不融資者也持續享受房屋增值與全部租金。策略真正多出來的，是金融資產複利；真正少掉的，是房貸利息。</p>
+</section>
+
+<section class="section">
+  <div class="bt-hero">
+    <div class="mini">同一間房、同一個房價假設</div>
+    <div class="big">不融資基準會跟著房價與租金一路累積。</div>
+    <p>兩種模式都持有同一間房、房價都以年化 +3% 成長。差異只在：策略模式把部分房屋淨值轉成金融資產，同時必須支付房貸利息。</p>
+  </div>
+</section>
+
+<section class="section">
+  <h2>01｜回測規則</h2>
+  <div class="bt-assumptions">
+    <div class="bt-assumption"><div class="k">2017 起始房屋</div><div class="v">2,000 萬</div><div class="d">原房貸 0。</div></div>
+    <div class="bt-assumption"><div class="k">房價成長</div><div class="v">固定 +3% / 年</div><div class="d">2020 2,185.5／2023 2,388.1／2026/9 2,668.7 萬。</div></div>
+    <div class="bt-assumption"><div class="k">融資方式</div><div class="v">70% LTV</div><div class="d">每次重新鑑價時，貸款重置到房價 70%。</div></div>
+    <div class="bt-assumption"><div class="k">房貸成本</div><div class="v">2.5% / 年</div><div class="d">只把利息視為租金收益的成本；本金不當作費用。</div></div>
+    <div class="bt-assumption"><div class="k">租金</div><div class="v">42 萬 / 年</div><div class="d">兩種模式都有；無融資者保留完整租金。</div></div>
+    <div class="bt-assumption"><div class="k">借款後分配</div><div class="v">20% 現金 / 80% 投資</div><div class="d">首次 1,400 萬＝280 萬現金＋1,120 萬投資。</div></div>
+  </div>
+
+  <div class="capital-split">
+    <div class="capital-cash"><span>安全現金</span><strong>20%</strong><span>首次 280 萬</span></div>
+    <div class="capital-invest"><span>長期投資</span><strong>80%</strong><span>首次 1,120 萬</span></div>
+  </div>
+
+  <div class="model-note"><strong>貸款模型：</strong>為了忠實反映你原本「房租主要負擔利息」的概念，本回測以利息成本計算；每次重新鑑價後，貸款餘額重置至當時房價的 70%，新增額度再依 20% 現金／80% 投資分配。美股 ETF 報酬以美元資產總報酬直接帶入，不另計匯率變動。</div>
+</section>
+
+<section class="section">
+  <h2>02｜房屋本身：兩種模式完全一樣</h2>
+  <table class="data-table">
+    <thead><tr><th>時間</th><th class="num">房屋市值</th><th>算法</th></tr></thead>
+    <tbody>
+      <tr><td>2017</td><td class="num">2,000.0 萬</td><td>起始值</td></tr>
+      <tr><td>2020</td><td class="num">2,185.5 萬</td><td>2,000 × 1.03³</td></tr>
+      <tr><td>2023</td><td class="num">2,388.1 萬</td><td>2,000 × 1.03⁶</td></tr>
+      <tr><td>2026/9</td><td class="num">2,668.7 萬</td><td>2,000 × 1.03⁹·⁷⁵</td></tr>
+    </tbody>
+  </table>
+  <p>房價增值是兩種模式共同享有的基礎。策略真正要觀察的是：金融資產增加的價值，能不能長期超過利息成本。</p>
+</section>
+
+<section class="section">
+  <h2>03｜不融資基準：現在是一路往上，不再固定 2,312 萬</h2>
+  <div class="calc-highlight">
+    <div class="calc-box baseline"><span>2020｜房屋＋3年完整租金</span><strong>2,311.5 萬</strong></div>
+    <div class="calc-box baseline"><span>2023｜房屋＋6年完整租金</span><strong>2,640.1 萬</strong></div>
+    <div class="calc-box baseline"><span>2026/9｜房屋＋9.75年完整租金</span><strong>3,078.2 萬</strong></div>
+    <div class="calc-box"><span>計算邏輯</span><strong>房屋市值＋累積租金</strong></div>
+  </div>
+  <p>例如 2026/9：2,668.7 萬房屋＋409.5 萬累積租金＝<strong>3,078.2 萬</strong>。這才是公平的連續 benchmark。</p>
+</section>
+
+<section class="section">
+  <h2>04｜市場端：使用 70 / 15 / 15 的年度總報酬</h2>
+  <div class="year-return-wrap">
+    <table class="year-return">
+      <thead><tr><th>年度</th><th>0050</th><th>VOO</th><th>QQQ</th><th>70/15/15 組合</th></tr></thead>
+      <tbody><tr>
+<td>2017</td>
+<td>+18.36%</td>
+<td>+21.77%</td>
+<td>+32.66%</td>
+<td><strong>+21.02%</strong></td>
+</tr><tr>
+<td>2018</td>
+<td>-4.87%</td>
+<td>-4.50%</td>
+<td>-0.13%</td>
+<td><strong>-4.10%</strong></td>
+</tr><tr>
+<td>2019</td>
+<td>+33.52%</td>
+<td>+31.37%</td>
+<td>+38.96%</td>
+<td><strong>+34.01%</strong></td>
+</tr><tr>
+<td>2020</td>
+<td>+31.08%</td>
+<td>+18.32%</td>
+<td>+48.62%</td>
+<td><strong>+31.80%</strong></td>
+</tr><tr>
+<td>2021</td>
+<td>+21.97%</td>
+<td>+28.79%</td>
+<td>+27.42%</td>
+<td><strong>+23.81%</strong></td>
+</tr><tr>
+<td>2022</td>
+<td>-21.19%</td>
+<td>-18.17%</td>
+<td>-32.58%</td>
+<td><strong>-22.45%</strong></td>
+</tr><tr>
+<td>2023</td>
+<td>+27.40%</td>
+<td>+26.32%</td>
+<td>+54.86%</td>
+<td><strong>+31.36%</strong></td>
+</tr><tr>
+<td>2024</td>
+<td>+48.67%</td>
+<td>+24.98%</td>
+<td>+25.58%</td>
+<td><strong>+41.65%</strong></td>
+</tr><tr>
+<td>2025</td>
+<td>+36.85%</td>
+<td>+17.82%</td>
+<td>+20.77%</td>
+<td><strong>+31.58%</strong></td>
+</tr><tr>
+<td>2026 YTD</td>
+<td>+65.11%</td>
+<td>+13.58%</td>
+<td>+17.10%</td>
+<td><strong>+50.18%</strong></td>
+</tr></tbody>
+    </table>
+  </div>
+  <p class="note">0050 採含息總報酬資料；VOO、QQQ 採股息再投入總報酬。2026 為截至 9 月初的 YTD 資料，因此 2026/9 數字屬當期估值，不是完整年度報酬。</p>
+</section>
+
+<section class="section">
+  <h2>05｜三個獨立 3 年實驗：全部用 20% 現金重新算</h2>
+  <div class="account-table-wrap">
+    <table class="account-table">
+      <thead><tr><th>區間</th><th>市場特徵</th><th class="num">策略期末淨資產</th><th class="num">同條件不融資</th><th class="num">策略增加</th></tr></thead>
+      <tbody><tr>
+<td>2017–2019</td>
+<td>正常成長／多頭</td>
+<td class="num">2,828 萬</td>
+<td class="num">2,312 萬</td>
+<td class="num"><strong>+517 萬</strong></td>
+</tr><tr>
+<td>2020–2022</td>
+<td>疫情急跌→反彈→2022修正</td>
+<td class="num">2,504 萬</td>
+<td class="num">2,312 萬</td>
+<td class="num"><strong>+192 萬</strong></td>
+</tr><tr>
+<td>2023–2025</td>
+<td>強勁多頭</td>
+<td class="num">3,829 萬</td>
+<td class="num">2,312 萬</td>
+<td class="num"><strong>+1,517 萬</strong></td>
+</tr></tbody>
+    </table>
+  </div>
+  <div class="independent-note"><strong>這三組仍然是獨立實驗。</strong><br>每一組都重新從「2,000 萬無房貸房屋」出發，所以三年的不融資基準仍相同；它們的用途是測不同市場環境，而不是拿來串成九年複利。</div>
+  <p>更有說服力的地方反而在 2020–2022：經歷疫情急跌、反彈與 2022 修正後，策略仍然只比不融資多約 <strong>192 萬</strong>。這表示槓桿不是每個三年都會帶來巨大超額報酬。</p>
+</section>
+
+<section class="section">
+  <h2>06｜真正的 2017 → 2026/9 連續資產帳本</h2>
+  <div class="milestone-table-wrap">
+    <table class="milestone-table">
+      <thead>
+        <tr>
+          <th>時間</th><th class="num">房屋</th><th class="num">貸款</th><th class="num">安全現金</th>
+          <th class="num">累計投入本金</th><th class="num">投資市值</th><th class="num">累積租金－利息</th><th class="num">總淨資產</th>
+        </tr>
+      </thead>
+      <tbody><tr>
+<td>2017</td>
+<td class="num">2,000.0</td>
+<td class="num">1,400.0</td>
+<td class="num">280.0</td>
+<td class="num">1,120.0</td>
+<td class="num">1,120.0</td>
+<td class="num">0.0</td>
+<td class="num"><strong>2,000.0</strong></td>
+</tr><tr>
+<td>2020</td>
+<td class="num">2,185.5</td>
+<td class="num">1,529.8</td>
+<td class="num">306.0</td>
+<td class="num">1,223.9</td>
+<td class="num">1,845.7</td>
+<td class="num">21.0</td>
+<td class="num"><strong>2,828.4</strong></td>
+</tr><tr>
+<td>2023</td>
+<td class="num">2,388.1</td>
+<td class="num">1,671.7</td>
+<td class="num">334.3</td>
+<td class="num">1,337.3</td>
+<td class="num">2,449.3</td>
+<td class="num">32.3</td>
+<td class="num"><strong>3,532.3</strong></td>
+</tr><tr>
+<td>2026/9</td>
+<td class="num">2,668.7</td>
+<td class="num">1,868.1</td>
+<td class="num">373.6</td>
+<td class="num">1,494.5</td>
+<td class="num">9,163.1</td>
+<td class="num">33.0</td>
+<td class="num"><strong>10,370.3</strong></td>
+</tr></tbody>
+    </table>
+  </div>
+  <p class="note">單位：萬元。轉增貸本身不會瞬間增加淨資產，因為「新增現金／投資」與「新增負債」同時增加；真正改變淨資產的是之後的投資報酬與利息成本。</p>
+</section>
+
+<section class="section">
+  <h2>07｜公平比較：傳統持房 vs 雙資產策略</h2>
+  <div class="milestone-table-wrap">
+    <table class="milestone-table" style="min-width:650px">
+      <thead><tr><th>時間</th><th class="num">不融資｜房屋＋租金</th><th class="num">雙資產策略｜總淨資產</th><th class="num">策略領先</th></tr></thead>
+      <tbody><tr>
+<td>2017</td>
+<td class="num">2,000.0 萬</td>
+<td class="num">2,000.0 萬</td>
+<td class="num"><strong>+0.0 萬</strong></td>
+</tr><tr>
+<td>2020</td>
+<td class="num">2,311.5 萬</td>
+<td class="num">2,828.4 萬</td>
+<td class="num"><strong>+516.9 萬</strong></td>
+</tr><tr>
+<td>2023</td>
+<td class="num">2,640.1 萬</td>
+<td class="num">3,532.3 萬</td>
+<td class="num"><strong>+892.2 萬</strong></td>
+</tr><tr>
+<td>2026/9</td>
+<td class="num">3,078.2 萬</td>
+<td class="num">10,370.3 萬</td>
+<td class="num"><strong>+7,292.1 萬</strong></td>
+</tr></tbody>
+    </table>
+  </div>
+
+  <div class="result-hero">
+    <div class="small">2026/9｜完整重算</div>
+    <div class="main">約 1.037 億</div>
+    <div class="sub">相對 2017 起始 2,000 萬：約 5.19×</div>
+  </div>
+
+  <div class="calc-highlight">
+    <div class="calc-box baseline"><span>2026/9 不融資基準</span><strong>3,078.2 萬</strong></div>
+    <div class="calc-box strategy"><span>2026/9 雙資產策略</span><strong>10,370.3 萬</strong></div>
+    <div class="calc-box strategy"><span>策略增加淨資產</span><strong>+7,292.1 萬</strong></div>
+    <div class="calc-box"><span>策略 / 不融資</span><strong>3.37×</strong></div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>08｜這個結果真正說明什麼？</h2>
+  <div class="five-proof">
+    <div class="item"><div class="n">1</div><div><strong>房屋增值不是策略的功勞</strong><span>兩種模式都用同一個 +3%／年。</span></div></div>
+    <div class="item"><div class="n">2</div><div><strong>20% 現金確實降低了最終報酬</strong><span>但換來的是更大的持有安全線，這是刻意的取捨。</span></div></div>
+    <div class="item"><div class="n">3</div><div><strong>租金不是憑空消失</strong><span>不融資者保留全部租金；策略者只扣除房貸利息後保留剩餘租金。</span></div></div>
+    <div class="item"><div class="n">4</div><div><strong>真正的超額報酬來自金融資產</strong><span>而且市場路徑差異很大，並非每三年都順風。</span></div></div>
+    <div class="item"><div class="n">5</div><div><strong>真正的槓桿仍然是時間</strong><span>房貸只是讓沉睡的房屋淨值更早開始參與複利。</span></div></div>
+  </div>
+</section>
+
+<div class="summary-card">
+  <div class="card-label">本章結論</div>
+  <div class="card-big">2026/9，雙資產策略的總淨資產約為 1.037 億。</div>
+  <p style="margin:0">這個結果不是靠誇大房價，而是建立在房價年增 3%、保留 20% 現金安全線，以及長期持有金融資產的前提下。</p>
+</div>
+<nav class="chapter-nav"><a href="04_cycle.html">← 第 4 章</a><a href="contents.html">目錄</a><a class="primary" href="06_stress.html">第 6 章 →</a></nav><div class="chapter-footer">© 2026 史丹利｜本書分享資產管理觀念與個人案例，不構成個別借貸、投資、法律或稅務建議。</div></main></body></html>
