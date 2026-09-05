@@ -40,6 +40,19 @@ p{margin:0 0 1em}
   display:flex;justify-content:space-between;align-items:center;
   gap:14px;margin:4px 0 28px;font-size:13px;letter-spacing:.12em;color:var(--muted);
 }
+.top-actions{
+  display:flex;align-items:center;justify-content:flex-end;gap:10px;
+}
+.home-link{
+  flex:0 0 auto;width:36px;height:36px;border:1px solid var(--line);border-radius:50%;
+  display:inline-flex;align-items:center;justify-content:center;background:#fff;color:var(--ink);
+  box-shadow:0 4px 14px rgba(16,33,63,.06);
+}
+.home-link:hover{border-color:#b8c9df;background:#f8fbff;color:var(--blue)}
+.home-link svg{
+  width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:2;
+  stroke-linecap:round;stroke-linejoin:round;
+}
 .chapter-no{font-weight:700;color:var(--ink)}
 .eyebrow{
   display:inline-block;color:var(--blue);font-size:14px;font-weight:700;
@@ -159,7 +172,7 @@ li{margin:.45em 0}
 }
 .nav{
   margin-top:44px;padding-top:20px;border-top:1px solid var(--line);
-  display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;
 }
 .nav a{
   display:flex;justify-content:center;align-items:center;text-align:center;
@@ -179,7 +192,7 @@ li{margin:.45em 0}
   .page{padding:28px 18px 76px;box-shadow:none}
   .lead{font-size:19px}
   .quote{font-size:19px}
-  .nav{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .nav{grid-template-columns:1fr 1fr 1fr}
   .topline{margin-bottom:22px}
   .gallery.two,.statgrid.four{grid-template-columns:1fr}
   .figure{margin:22px 0}
