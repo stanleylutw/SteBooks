@@ -1534,6 +1534,195 @@ a{color:inherit;text-decoration:none}
   width:min(100%, 780px);
 }
 
+/* ===== chapter-01 typography alignment ===== */
+.page{
+  max-width:740px;
+  width:auto;
+  padding:34px 24px 72px;
+  box-shadow:0 0 0 1px rgba(23,54,47,.03);
+}
+
+h1{
+  font-size:clamp(32px,7vw,50px);
+  line-height:1.14;
+  margin:.1em 0 .38em;
+  letter-spacing:0;
+  color:var(--green);
+}
+
+h2,
+.section h2{
+  font-size:clamp(24px,5vw,31px);
+  line-height:1.3;
+  margin:1.7em 0 .55em;
+  letter-spacing:0;
+}
+
+h3{
+  font-size:21px;
+  line-height:1.4;
+  margin:1.5em 0 .45em;
+}
+
+.toc-title,
+#toc .toc-title{
+  font-size:clamp(24px,5vw,31px);
+  line-height:1.3;
+  margin:.2em 0 .55em;
+  letter-spacing:0;
+}
+
+p,
+.section p{
+  font-size:18px;
+  line-height:1.78;
+}
+
+.lead{
+  font-size:20px;
+  line-height:1.72;
+  color:#3f514a;
+  margin:0 0 28px;
+}
+
+.topline{
+  margin:4px 0 28px;
+  font-size:13px;
+  letter-spacing:.12em;
+  color:var(--muted);
+}
+
+.chapter-no{
+  font-weight:800;
+  color:var(--ink);
+}
+
+.eyebrow{
+  display:inline-block;
+  color:var(--green2);
+  font-size:14px;
+  font-weight:800;
+  letter-spacing:.08em;
+  margin-bottom:8px;
+}
+
+.chapter-progress{
+  display:none;
+}
+
+.chapter-kicker,
+.chapter-title,
+.chapter-lead,
+.chapter-top,
+.chapter-footer,
+.chapter-nav{
+  all:unset;
+}
+
+.nav{
+  display:grid;
+  grid-template-columns:1fr 1fr 1fr;
+  gap:10px;
+  margin-top:34px;
+  padding-top:18px;
+  border-top:1px solid var(--line);
+}
+
+.nav a{
+  text-align:center;
+  padding:12px 10px;
+  border-radius:10px;
+  background:#edf2ef;
+  color:var(--green);
+  font-weight:800;
+  font-size:14px;
+  line-height:1.45;
+}
+
+.nav a.primary{
+  background:var(--green);
+  color:#fff;
+}
+
+.toc-list{
+  gap:10px;
+  margin:20px 0;
+}
+
+.toc-item{
+  border:1px solid var(--line);
+  border-radius:10px;
+  padding:15px 16px;
+  background:#fff;
+}
+
+.summary-card .card-big,
+.card-big{
+  font-size:23px;
+  line-height:1.42;
+  font-weight:800;
+}
+
+.big-result .value,
+.result-hero .main{
+  font-size:34px;
+  line-height:1.18;
+}
+
+.bt-hero .big{
+  font-size:23px;
+  line-height:1.45;
+}
+
+.data-table,
+.account-table,
+.milestone-table,
+.year-return{
+  font-size:14px;
+}
+
+.metric .value,
+.bt-assumption .v,
+.calc-box strong,
+.term-box .tbig,
+.pending-result .title,
+.test-card .end,
+.backtest-card .ending,
+.fact strong{
+  font-size:22px;
+  line-height:1.25;
+}
+
+.chapter-hook,
+.manifesto{
+  font-size:20px;
+  line-height:1.68;
+}
+
+.card-label,
+.kicker,
+.metric .label,
+.bt-assumption .k,
+.result-hero .small,
+.pending-result .tag,
+.world .wtag{
+  font-size:13px;
+}
+
+.note,
+.metric .sub,
+.reader-card span,
+.choice-card p,
+.stress-card p,
+.record-item span,
+.bt-assumption .d,
+.model-note,
+.old-model p,
+.five-proof span{
+  font-size:14px;
+  line-height:1.65;
+}
+
 .metric,
 .compare-card,
 .reader-card,
@@ -1640,7 +1829,7 @@ a{color:inherit;text-decoration:none}
   }
 
   .toc-title{
-    font-size:42px;
+    font-size:clamp(24px,6vw,31px);
     margin-bottom:8px;
   }
 
@@ -1649,10 +1838,10 @@ a{color:inherit;text-decoration:none}
   }
 
   .toc-item{
-    grid-template-columns:46px minmax(0,1fr);
+    grid-template-columns:42px minmax(0,1fr);
     align-items:start;
     gap:12px;
-    padding:15px 0;
+    padding:14px 13px;
   }
 
   .toc-no{
@@ -1677,7 +1866,7 @@ a{color:inherit;text-decoration:none}
 
   .summary-card .card-big,
   .card-big{
-    font-size:26px;
+    font-size:22px;
     line-height:1.35;
   }
 
