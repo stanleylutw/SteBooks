@@ -14,6 +14,8 @@
   --line:#dce3ec;
   --accent:#0b5fc6;
   --accent-soft:#e8f2ff;
+  --green:#0f4d3e;
+  --gold:#b78b3d;
   --max:980px;
 }
 *{box-sizing:border-box}
@@ -75,12 +77,66 @@ h1{
   margin:0;
   max-width:650px;
 }
-.cover{
+.library-map{
+  position:relative;
   background:var(--paper);
   border:1px solid var(--line);
   border-radius:8px;
-  overflow:hidden;
-  box-shadow:0 18px 44px rgba(17,24,39,.12);
+  padding:18px;
+  box-shadow:0 18px 44px rgba(17,24,39,.1);
+}
+.library-map:before{
+  content:"";
+  position:absolute;
+  left:42px;
+  right:42px;
+  top:50%;
+  height:2px;
+  background:linear-gradient(90deg,var(--accent),var(--green));
+}
+.book-node{
+  position:relative;
+  display:grid;
+  grid-template-columns:46px minmax(0,1fr);
+  gap:12px;
+  align-items:center;
+  min-height:92px;
+  padding:14px;
+  border:1px solid var(--line);
+  border-radius:8px;
+  background:#fff;
+}
+.book-node + .book-node{
+  margin-top:14px;
+}
+.book-node:hover{
+  border-color:#b9cce4;
+  box-shadow:0 8px 24px rgba(17,24,39,.07);
+}
+.book-dot{
+  display:grid;
+  place-items:center;
+  width:46px;
+  height:46px;
+  border-radius:50%;
+  color:#fff;
+  background:var(--accent);
+  font-weight:900;
+}
+.book-node:nth-child(2) .book-dot{
+  background:var(--green);
+}
+.book-node strong{
+  display:block;
+  font-size:17px;
+  line-height:1.35;
+}
+.book-node span{
+  display:block;
+  color:var(--muted);
+  font-size:13px;
+  line-height:1.45;
+  margin-top:3px;
 }
 .section-title{
   display:flex;
@@ -151,7 +207,8 @@ h2{
   body{font-size:17px;background:#fff}
   .site{padding:24px 18px 52px}
   .intro{grid-template-columns:1fr;padding-top:26px}
-  .cover{max-width:280px}
+  .library-map{max-width:360px}
+  .library-map:before{left:41px;right:auto;top:48px;bottom:48px;width:2px;height:auto}
   .section-title{display:block}
   .chapter{grid-template-columns:56px minmax(0,1fr);padding:14px}
   .arrow{display:none}
@@ -170,17 +227,29 @@ h2{
     <div>
       <span class="eyebrow">FREE E-BOOKS</span>
       <h1>史丹利電子書</h1>
-      <p class="lead">收錄投資實戰筆記、風險管理與長期策略。每一本書會獨立成章節資料夾，方便之後持續新增與維護。</p>
+      <p class="lead">收錄投資實戰筆記、風險管理與長期策略，並用不同角度探索財務觀念。</p>
     </div>
-    <a class="cover" href="chapters/chapter-01/" aria-label="閱讀撐得住，才賺得到">
-      <img src="chapters/chapter-01/assets/cover.png" alt="《撐得住，才賺得到》封面">
-    </a>
+    <div class="library-map" aria-label="電子書系列">
+      <a class="book-node" href="chapters/chapter-01/">
+        <span class="book-dot">01</span>
+        <div>
+          <strong>撐得住，才賺得到</strong>
+          <span>核心資產與股票質押實戰</span>
+        </div>
+      </a>
+      <a class="book-node" href="chapters/chapter-02/">
+        <span class="book-dot">02</span>
+        <div>
+          <strong>房子不要只住，要讓它工作</strong>
+          <span>房屋淨值與第二資產曲線</span>
+        </div>
+      </a>
+    </div>
   </section>
 
   <section aria-labelledby="books-title">
     <div class="section-title">
       <h2 id="books-title">目前書目</h2>
-      <div class="small">每本電子書皆保留獨立章節資料夾，方便持續新增與維護。</div>
     </div>
     <div class="chapters">
       <a class="chapter" href="chapters/chapter-01/">
