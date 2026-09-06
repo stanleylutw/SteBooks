@@ -48,6 +48,17 @@ img{display:block;max-width:100%;height:auto}
   font-weight:800;
   letter-spacing:.02em;
 }
+.masthead-links{
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+.masthead-links a{
+  color:var(--muted);
+}
+.masthead-links a:hover{
+  color:var(--accent);
+}
 .intro{
   display:grid;
   grid-template-columns:minmax(0,1fr) minmax(240px,340px);
@@ -251,6 +262,7 @@ h2{
   body{font-size:17px;background:#fff}
   .site{padding:16px 18px 52px}
   .masthead{padding:8px 0 14px}
+  .masthead-links{gap:10px;font-size:13px}
   .intro{grid-template-columns:1fr;padding-top:18px}
   .book-carousel{width:100%;max-width:320px;margin-inline:auto}
   .carousel-control{width:34px;height:34px;font-size:21px}
@@ -269,7 +281,10 @@ h2{
 <main class="site">
   <header class="masthead">
     <div class="brand">STeBooks</div>
-    <div>作者｜史丹利</div>
+    <nav class="masthead-links" aria-label="網站導覽">
+      <span>作者｜史丹利</span>
+      <a href="about.html">關於作者</a>
+    </nav>
   </header>
 
   <section class="intro">

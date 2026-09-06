@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="關於史丹利與 STeBooks，分享投資策略、資產配置、現金流與長期財務規劃的實戰思考。">
+<title>關於作者｜史丹利</title>
+<style>
+:root{
+  --bg:#f7f9fc;
+  --paper:#ffffff;
+  --ink:#10213f;
+  --muted:#67758c;
+  --subtle:#7b8798;
+  --line:#dfe6ef;
+  --blue:#0b5fc6;
+  --blue-soft:#eaf3ff;
+  --blue-line:#cfe2fb;
+  --soft-panel:#f8fbff;
+  --max:680px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang TC","Noto Sans TC","Microsoft JhengHei",sans-serif;
+  background:var(--bg);
+  color:var(--ink);
+  line-height:1.78;
+  font-size:16.5px;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+.progress{
+  position:fixed;
+  top:0;
+  left:0;
+  width:0;
+  height:3px;
+  background:var(--blue);
+  z-index:99;
+}
+.page{
+  max-width:var(--max);
+  margin:40px auto 80px;
+  padding:46px 42px 60px;
+  background:var(--paper);
+  border:1px solid rgba(223,230,239,.9);
+  border-radius:14px;
+  box-shadow:0 14px 36px rgba(23,32,51,.05);
+}
+.topline{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:16px;
+  margin-bottom:38px;
+  padding-bottom:22px;
+  border-bottom:1px solid var(--line);
+}
+.brand-label{
+  color:var(--subtle);
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+}
+.top-actions{
+  display:flex;
+  align-items:center;
+  gap:14px;
+}
+.series-tag{
+  padding:4px 10px;
+  border-radius:999px;
+  background:var(--blue-soft);
+  color:var(--blue);
+  font-size:13px;
+  font-weight:650;
+  letter-spacing:.04em;
+}
+.home-link{
+  width:36px;
+  height:36px;
+  display:grid;
+  place-items:center;
+  border:1px solid var(--line);
+  border-radius:50%;
+  color:var(--ink);
+  background:#fff;
+}
+.home-link:hover{
+  border-color:var(--blue);
+  color:var(--blue);
+}
+.home-link svg{
+  width:17px;
+  height:17px;
+  fill:none;
+  stroke:currentColor;
+  stroke-width:2;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+}
+.author-header{
+  display:flex;
+  align-items:center;
+  gap:18px;
+  margin-bottom:26px;
+}
+.author-avatar{
+  width:60px;
+  height:60px;
+  flex:0 0 60px;
+  display:grid;
+  place-items:center;
+  border-radius:50%;
+  background:var(--blue);
+  color:#fff;
+  font-size:20px;
+  font-weight:700;
+  letter-spacing:.04em;
+  box-shadow:0 8px 18px rgba(47,95,74,.16);
+}
+.eyebrow,
+.section-eyebrow{
+  display:block;
+  color:var(--blue);
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+}
+.eyebrow{margin-bottom:4px}
+.section-eyebrow{
+  color:var(--subtle);
+  margin-bottom:8px;
+}
+h1{
+  margin:0;
+  color:var(--ink);
+  font-size:30px;
+  line-height:1.25;
+  font-weight:700;
+  letter-spacing:0;
+}
+h2{
+  margin:0 0 18px;
+  color:var(--ink);
+  font-size:22px;
+  line-height:1.35;
+  font-weight:700;
+  letter-spacing:0;
+}
+p{
+  margin:0 0 18px;
+  color:var(--muted);
+}
+.lead{
+  margin:0 0 18px;
+  color:var(--ink);
+  font-size:18px;
+  line-height:1.68;
+  font-weight:500;
+}
+.rule{
+  height:1px;
+  margin:40px 0;
+  background:var(--line);
+}
+.quote{
+  margin:24px 0;
+  padding:22px 24px;
+  border:1px solid var(--blue-line);
+  border-left:4px solid var(--blue);
+  border-radius:0 10px 10px 0;
+  background:var(--soft-panel);
+  color:var(--ink);
+  font-size:17px;
+  font-weight:650;
+  line-height:1.62;
+}
+.quote-sub{
+  margin-top:7px;
+  color:var(--muted);
+  font-size:15px;
+  font-weight:400;
+  line-height:1.7;
+}
+.contact-card{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:16px;
+  flex-wrap:wrap;
+  margin-top:38px;
+  padding:22px 24px;
+  border:1px solid var(--blue-line);
+  border-radius:10px;
+  background:var(--blue-soft);
+}
+.contact-title{
+  margin-bottom:4px;
+  color:var(--blue);
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:.14em;
+}
+.contact-desc{
+  color:var(--muted);
+  font-size:15px;
+  line-height:1.6;
+}
+.contact-link{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  min-height:40px;
+  padding:9px 16px;
+  border:1px solid var(--line);
+  border-radius:8px;
+  background:#fff;
+  color:var(--ink);
+  font-size:14.5px;
+  font-weight:650;
+  overflow-wrap:anywhere;
+}
+.contact-link svg{
+  width:16px;
+  height:16px;
+  flex:0 0 16px;
+}
+.signature-box{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:16px;
+  margin-top:46px;
+  padding-top:22px;
+  border-top:1px solid var(--line);
+}
+.author-sig{
+  color:var(--ink);
+  font-size:16px;
+  font-weight:700;
+}
+.author-sig span{
+  color:var(--subtle);
+  font-size:14px;
+  font-weight:400;
+}
+.footer{
+  color:var(--subtle);
+  font-size:13px;
+  text-align:right;
+}
+@media (max-width:600px){
+  body{background:#fff;font-size:16px}
+  .page{
+    margin:0;
+    padding:24px 20px 58px;
+    border:0;
+    border-radius:0;
+    box-shadow:none;
+  }
+  .topline{
+    margin-bottom:30px;
+    padding-bottom:20px;
+  }
+  .author-header{
+    gap:14px;
+    margin-bottom:22px;
+  }
+  .author-avatar{
+    width:52px;
+    height:52px;
+    flex-basis:52px;
+    font-size:18px;
+  }
+  h1{font-size:27px}
+  h2{font-size:21px}
+  .lead{font-size:17px}
+  .rule{margin:34px 0}
+  .quote{
+    margin:20px 0;
+    padding:18px 20px;
+    font-size:16.5px;
+  }
+  .contact-card{
+    margin-top:32px;
+    padding:20px;
+    align-items:flex-start;
+  }
+  .contact-link{
+    width:100%;
+    justify-content:center;
+  }
+  .signature-box{
+    margin-top:40px;
+    flex-direction:column;
+    align-items:flex-start;
+    gap:8px;
+  }
+  .footer{text-align:left}
+}
+</style>
+<script data-goatcounter="https://elecy88.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+</head>
+<body>
+<div class="progress"></div>
+<main class="page" id="top">
+  <header class="topline">
+    <div class="brand-label">About the Author</div>
+    <div class="top-actions">
+      <span class="series-tag">STeBooks</span>
+      <a class="home-link" href="index.html" aria-label="回首頁" title="回首頁">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="m3 10.5 9-7 9 7"></path>
+          <path d="M5 9.5V20h5v-6h4v6h5V9.5"></path>
+        </svg>
+      </a>
+    </div>
+  </header>
+
+  <div class="author-header">
+    <div class="author-avatar">S</div>
+    <div>
+      <span class="eyebrow">Author & Creator</span>
+      <h1>史丹利</h1>
+    </div>
+  </div>
+
+  <p class="lead">
+    我寫的不是投資教科書，而是把自己真實走過、反覆驗證過的思考方式記錄下來。
+  </p>
+
+  <p>
+    背景橫跨科技產品開發與社會服務。習慣從實際問題出發，用數據、模型與真實案例反覆驗證，找出自己能理解、也能長期執行的方法。
+  </p>
+
+  <div class="rule"></div>
+
+  <section class="section">
+    <span class="section-eyebrow">MY INVESTMENT VIEW</span>
+    <h2>我的投資觀</h2>
+
+    <div class="quote">
+      資產真正的價值，是讓我們擁有更多選擇。
+      <div class="quote-sub">有底氣說「我想做」，也有底氣說「我不想做」。</div>
+    </div>
+
+    <p>
+      對我來說，能夠選擇自己想過的生活，本身就是財富的一部分。
+    </p>
+  </section>
+
+  <div class="rule"></div>
+
+  <section class="section">
+    <span class="section-eyebrow">ABOUT STEBOOKS</span>
+    <h2>關於 STeBooks</h2>
+
+    <p>
+      STeBooks 是一個免費電子書系列。
+    </p>
+
+    <p>
+      用簡單、直觀、視覺化與案例導向的方式，分享我對投資策略、資產配置、現金流與長期財務規劃的實際思考。
+    </p>
+
+    <p>
+      不想把投資講得很複雜，更希望把複雜的問題整理成看得懂、想得清楚，也能自己判斷的內容。
+    </p>
+  </section>
+
+  <section class="contact-card">
+    <div>
+      <div class="contact-title">CONTACT & CONNECT</div>
+      <div class="contact-desc">歡迎投資理財交流與討論</div>
+    </div>
+    <a class="contact-link" href="mailto:stanleycafe88@gmail.com">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <rect width="20" height="16" x="2" y="4" rx="2"></rect>
+        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+      </svg>
+      stanleycafe88@gmail.com
+    </a>
+  </section>
+
+  <footer class="signature-box">
+    <div class="author-sig">Stanley｜史丹利 <span>· 創作者</span></div>
+    <div class="footer">© 2026 史丹利｜STeBooks</div>
+  </footer>
+</main>
+<script>
+(function(){
+  const bar=document.querySelector('.progress');
+  function update(){
+    const h=document.documentElement;
+    const max=h.scrollHeight-h.clientHeight;
+    const pct=max>0 ? (h.scrollTop/max)*100 : 0;
+    bar.style.width=pct+'%';
+  }
+  document.addEventListener('scroll',update,{passive:true});
+  update();
+})();
+</script>
+</body>
+</html>
